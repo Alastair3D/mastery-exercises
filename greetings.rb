@@ -9,3 +9,29 @@
 # •    The user enters their name.
 # •    If the user's name begins with 'S', the program shouts the user's name back at them.
 # •    If the user's name begins with any other letter, the program just says 'Hi, ' plus their name.
+
+# V1
+puts "Welcome user"                        print "What's your first name?"
+user = gets.chomp                            name = gets.chomp.downcase
+
+if user.upcase.chr == "S"                     if name[0] == 's'
+ puts user.upcase + "!"                         puts name.upcase + "!"
+else                                     else
+ puts "Hi, #{user}."                           puts "Hi, " + name
+end                                    end
+
+# V2
+print "Whgat's your first name?"
+name = gets.chomp.downcase
+
+  if name[0] == 's'
+    puts name.upcase + '!'
+  else
+    puts "Hi, " + name
+  end
+
+# Refactoring using ‘early returns’:
+puts "Welcome user"
+user = gets.chomp
+return puts user.upcase + "!" if user.upcase.chr == "S"
+return puts "Hi, " + user + "."
