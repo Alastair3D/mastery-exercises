@@ -1,3 +1,7 @@
+# Chapter 4, DiceGame2
+#
+# Upgrade the dice game so now both I and my opponent roll two, six-sided dice each.
+
 def roll
  rand(2..12)
 end
